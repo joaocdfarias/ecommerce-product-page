@@ -1,0 +1,16 @@
+@use '../utils/colors' as *;
+
+.imgWrapper {
+  display: flex;
+  gap: 30px;
+
+  img {
+    border-radius: 10px;
+    border: 3px solid transparent;
+
+    &.selected {
+      border: 3px solid $orange;
+      opacity: 0.4;
+    }
+  }
+}
