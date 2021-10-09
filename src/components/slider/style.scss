@@ -1,8 +1,6 @@
 @use '../utils/colors' as *;
 
 .imgWrapper {
-  display: grid;
-  grid-template-columns: repeat(1fr, 4);
   max-width: 500px;
 
   .selectedImage {
@@ -25,8 +23,9 @@
     img {
       border-radius: 20px;
       border: 3px solid transparent;
-      width: 100px;
+      width: 96px;
       height: auto;
+      cursor: pointer;
 
       &.selected {
         border: 3px solid $orange;
