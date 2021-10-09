@@ -1,11 +1,15 @@
 import React from 'react'
 import Slider from './components/slider'
+import ProductInfo from './components/productInfo'
+
+import './components/utils/_container.scss'
 
 const App = () => {
   return (
-    <div>
+    <main className="wrapper">
       <Slider />
-    </div>
+      <ProductInfo />
+    </main>
   )
 }
 
