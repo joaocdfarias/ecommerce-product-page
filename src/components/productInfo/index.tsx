@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from '../button'
+
 import './style.scss'
 
 const productInfo = () => {
@@ -18,6 +20,9 @@ const productInfo = () => {
         <p>
           <s>$250.00</s>
         </p>
+      </div>
+      <div className="buttonWrapper">
+        <Button hasIcon name="Add to cart"></Button>
       </div>
     </div>
   )
