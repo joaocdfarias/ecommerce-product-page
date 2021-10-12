@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../button'
+import Counter from '../counter'
 
 import './style.scss'
 
@@ -22,6 +23,7 @@ const productInfo = () => {
         </p>
       </div>
       <div className="buttonWrapper">
+        <Counter />
         <Button hasIcon name="Add to cart"></Button>
       </div>
     </div>
