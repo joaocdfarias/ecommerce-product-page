@@ -1,0 +1,25 @@
+@use '../utils/colors' as *;
+
+.counterWrapper {
+  background-color: $light-grayish-blue;
+  border-radius: 10px;
+  display: flex;
+
+  p {
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  button {
+    background-color: $light-grayish-blue;
+    color: $orange;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
