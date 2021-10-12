@@ -12,6 +12,14 @@ button {
   border: none;
   border-radius: 10px;
   font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    box-shadow: 5px 20px 20px 5px $pale-orange;
+    transition: 0.2s;
+    opacity: 0.8;
+  }
 
   img {
     color: white;
