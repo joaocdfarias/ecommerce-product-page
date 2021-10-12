@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo.svg'
-import cart from '../../assets/icon-cart.svg'
+import cart from '../../assets/icon-cart-1.svg'
 import avatar from '../../assets/image-avatar.png'
 import './style.scss'
 
@@ -38,6 +38,7 @@ function Header() {
       <nav className="userWrapper">
         <ul>
           <img width={25} height={25} src={cart} alt="Cart" />
+          <span className="cartBadge">3</span>
           <img
             onClick={handleClick}
             width={55}
