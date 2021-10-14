@@ -5,6 +5,7 @@ import avatar from '../../assets/image-avatar.png'
 
 import { useCount } from '../../contexts/CartContext'
 import './style.scss'
+import Modal from '../modal'
 
 function Header() {
   const [click, setClick] = React.useState(false)
@@ -54,6 +55,7 @@ function Header() {
             className={click ? 'active' : ''}
           />
         </ul>
+        <Modal />
       </nav>
     </header>
   )

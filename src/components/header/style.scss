@@ -1,4 +1,4 @@
-@import '../utils/colors';
+@use '../utils/colors' as *;
 
 header {
   display: flex;

@@ -15,6 +15,12 @@ button {
   cursor: pointer;
   transition: 0.2s;
 
+  &.noIcon {
+    img {
+      display: none;
+    }
+  }
+
   &:hover {
     box-shadow: 5px 20px 20px 5px $pale-orange;
     transition: 0.2s;
