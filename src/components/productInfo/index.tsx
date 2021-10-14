@@ -2,9 +2,14 @@ import React from 'react'
 import Button from '../button'
 import Counter from '../counter'
 
+import { useCount } from '../../contexts/CartContext'
+
 import './style.scss'
 
-const productInfo = () => {
+const ProductInfo = () => {
+  const [counter, setCounter] = React.useState(0)
+  const { setCount } = useCount()
+
   return (
     <div className="productInfo">
       <span className="brand">Sneaker Company</span>
@@ -23,11 +28,15 @@ const productInfo = () => {
         </p>
       </div>
       <div className="buttonWrapper">
-        <Counter />
-        <Button hasIcon name="Add to cart"></Button>
+        <Counter count={counter} setCount={setCounter} />
+        <Button
+          onClick={() => setCount(counter)}
+          hasIcon
+          name="Add to cart"
+        ></Button>
       </div>
     </div>
   )
 }
 
-export default productInfo
+export default ProductInfo

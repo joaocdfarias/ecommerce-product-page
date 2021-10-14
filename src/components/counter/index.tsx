@@ -1,24 +1,20 @@
 import React from 'react'
 import './style.scss'
 
-const Counter = () => {
-  const [count, setCount] = React.useState(0)
-
-  const addCountHandler = () => {
-    setCount(count + 1)
-  }
-  const removeCountHandler = () => {
-    if (count === 0) {
-      return
-    }
-    setCount(count - 1)
-  }
-
+const Counter = ({ count, setCount }: any) => {
   return (
     <div className="counterWrapper">
-      <button onClick={removeCountHandler}>-</button>
+      <button
+        onClick={() => {
+          if (count === 0) return
+
+          setCount(count - 1)
+        }}
+      >
+        -
+      </button>
       <p>{count}</p>
-      <button onClick={addCountHandler}>+</button>
+      <button onClick={() => setCount(count + 1)}>+</button>
     </div>
   )
 }

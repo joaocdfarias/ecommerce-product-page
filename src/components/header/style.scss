@@ -7,6 +7,15 @@ header {
   height: 100px;
   border-bottom: 1px solid $grayish-blue;
 
+  .modal {
+    position: absolute;
+    background-color: $orange;
+    width: 100px;
+    height: 100px;
+    right: 90px;
+    top: 90px;
+  }
+
   .userWrapper {
     margin-left: auto;
 

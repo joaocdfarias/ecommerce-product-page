@@ -10,33 +10,37 @@ const Slider = () => {
   }
 
   return (
-    <div className="imgWrapper">
-      <div className="selectedImage">
-        {imgMock.map((data, index) => {
-          return (
-            <img
-              src={data.imgSrc}
-              alt={'Imagem do produto ' + data.id}
-              key={data.id}
-              className={product === index ? 'selected' : 'hide'}
-            />
-          )
-        })}
+    <>
+      <div className="imgWrapper">
+        <div className="selectedImage">
+          {imgMock.map((data, index) => {
+            return (
+              <img
+                src={data.imgSrc}
+                alt={'Imagem do produto ' + data.id}
+                key={data.id}
+                draggable="false"
+                className={product === index ? 'selected' : 'hide'}
+              />
+            )
+          })}
+        </div>
+        <div className="imgSelect">
+          {imgMock.map((data, index) => {
+            return (
+              <img
+                onClick={() => changeProduct(index)}
+                src={data.imgThumb}
+                alt={'Imagem do produto ' + data.id}
+                key={data.id}
+                draggable="false"
+                className={product === index ? 'selected' : ''}
+              />
+            )
+          })}
+        </div>
       </div>
-      <div className="imgSelect">
-        {imgMock.map((data, index) => {
-          return (
-            <img
-              onClick={() => changeProduct(index)}
-              src={data.imgThumb}
-              alt={'Imagem do produto ' + data.id}
-              key={data.id}
-              className={product === index ? 'selected' : ''}
-            />
-          )
-        })}
-      </div>
-    </div>
+    </>
   )
 }
 

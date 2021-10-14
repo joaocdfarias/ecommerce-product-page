@@ -2,6 +2,8 @@ import React from 'react'
 import logo from '../../assets/logo.svg'
 import cart from '../../assets/icon-cart-1.svg'
 import avatar from '../../assets/image-avatar.png'
+
+import { useCount } from '../../contexts/CartContext'
 import './style.scss'
 
 function Header() {
@@ -10,6 +12,10 @@ function Header() {
   const handleClick = () => {
     return setClick(!click)
   }
+
+  const { count } = useCount()
+
+  console.log(count)
 
   return (
     <header>
@@ -38,7 +44,7 @@ function Header() {
       <nav className="userWrapper">
         <ul>
           <img width={25} height={25} src={cart} alt="Cart" />
-          <span className="cartBadge">3</span>
+          <span className="cartBadge"> {count} </span>
           <img
             onClick={handleClick}
             width={55}
