@@ -14,9 +14,9 @@ const ProductInfo = () => {
 
   return (
     <>
-      {sneaker.map((item) => {
+      {sneaker.map((item, id) => {
         return (
-          <div className="productInfo">
+          <div key={id} className="productInfo">
             <span className="brand"> {item.brand} </span>
             <h2 className="productName"> {item.productName} </h2>
             <p className="productDescription">{item.description}</p>

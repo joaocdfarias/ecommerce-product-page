@@ -9,6 +9,11 @@ import Modal from '../modal'
 
 function Header() {
   const [click, setClick] = React.useState(false)
+  const [cartClick, setCartClick] = React.useState(false)
+
+  const handleCartClick = () => {
+    return setCartClick(!cartClick)
+  }
 
   const handleClick = () => {
     return setClick(!click)
@@ -44,7 +49,7 @@ function Header() {
       </nav>
       <nav className="userWrapper">
         <ul>
-          <img width={25} height={25} src={cart} alt="Cart" />
+          <img onClick={handleCartClick} width={25} height={25} src={cart} alt="Cart" />
           <span className="cartBadge"> {count} </span>
           <img
             onClick={handleClick}
@@ -55,7 +60,7 @@ function Header() {
             className={click ? 'active' : ''}
           />
         </ul>
-        <Modal />
+        {click || cartClick ? <Modal /> : null}
       </nav>
     </header>
   )

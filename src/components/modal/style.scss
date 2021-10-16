@@ -23,4 +23,26 @@
       margin: 16px 0;
     }
   }
+
+  .modalProduct {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    p {
+      margin-block-start: 8px;
+      margin-block-end: 8px;
+      color: $dark-grayish-blue;
+
+      strong {
+        color: $very-dark-blue;
+      }
+    }
+
+    .thumbnail {
+      width: 50px;
+      border-radius: 6px;
+    }
+  }
 }
