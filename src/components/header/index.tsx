@@ -4,8 +4,8 @@ import cart from '../../assets/icon-cart-1.svg'
 import avatar from '../../assets/image-avatar.png'
 
 import { useCount } from '../../contexts/CartContext'
-import './style.scss'
 import Modal from '../modal'
+import './style.scss'
 
 function Header() {
   const [click, setClick] = React.useState(false)
