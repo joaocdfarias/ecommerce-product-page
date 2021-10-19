@@ -8,14 +8,14 @@ import { useCount } from '../../contexts/CartContext'
 import './style.scss'
 
 const Modal = () => {
-  const { count } = useCount()
+  let { count,setCount } = useCount()
 
   return (
     <div className="modalCart">
       <div className="modalHeader">
         <h3>Cart</h3>
       </div>
-      <div className="modalContent">
+      {count === 0 ? '' : <div className="modalContent">
         {sneaker.map((item, id) => {
           return (
             <div key={id} className="modalProduct">
@@ -28,11 +28,11 @@ const Modal = () => {
                   <strong> ${item.discountPrice * count}.00 </strong>{' '}
                 </p>
               </div>
-              <img src={iconDelete} alt="" />
+              <img onClick={() => setCount(count = 0)} className="iconDelete" src={iconDelete} alt="" />
             </div>
           )
         })}
-      </div>
+      </div>}
       <Button name="Checkout"></Button>
     </div>
   )
