@@ -7,6 +7,8 @@
   box-shadow: 0px 16px 40px -10px $grayish-blue;
   border-radius: 10px;
   top: 100px;
+  max-width: 350px;
+  width: 100%;
 
   .modalHeader {
     h3 {
@@ -38,6 +40,11 @@
       strong {
         color: $very-dark-blue;
       }
+    }
+
+    .iconDelete {
+      cursor: pointer;
+      margin-left: auto;
     }
 
     .thumbnail {
